@@ -24,9 +24,28 @@ body{
    text-align: center;
    padding: 40px;
    border: 1px solid black;
-   background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+   background-color: -webkit-linear-gradient(top, #d2d2d2, #ddd);
    cursor: pointer;
 }
 .double{
     flex-basis: 50%;
+}
+.display{
+    background-color: #212121 ;
+    color: white;
+    padding: 10px 20px;
+}
+.operator,
+.negative,
+.equal{
+    background-color: orange;
+}
+.card{
+    padding: 30px;
+    -webkit-box-shadow: 4px 10px 14px -4px rgba(0,0,0,0.61);
+    -moz-box-shadow: 4px 10px 14px -4px rgba(0,0,0,0.61);
+    box-shadow: 4px 10px 14px -4px rgba(0,0,0,0.61);
+}
+.button:hover{
+    font-weight: bold;
 }
