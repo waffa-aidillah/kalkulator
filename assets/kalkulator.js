@@ -39,11 +39,21 @@ function performCalculation(){
         window.alert('belum ada operator');
         return;
     }
+    let result = 0;
     if(calculator.operator==='+'){
-        calculator.displayNumber = (parseInt(calculator.firtNumber) + parseInt(calculator.displayNumber));
+        result = (parseInt(calculator.firtNumber) + parseInt(calculator.displayNumber));
     }else{
-        calculator.displayNumber = (parseInt(calculator.firtNumber) - parseInt(calculator.displayNumber));
+        result = (parseInt(calculator.firtNumber) - parseInt(calculator.displayNumber));
     }
+    const history = {
+        firstNumber: calculator.firtNumber,
+        secondNumber: calculator.displayNumber,
+        operator: calculator.operator,
+        result: result
+    };
+    putHistory(history);
+    calculator.displayNumber =result;
+    renderHistory();
 }
 //fungsi memasukkan digit
 function inputDigit(digit){
